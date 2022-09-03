@@ -11,7 +11,7 @@ int main(){
    float precio_unitario, iva, total;
    string articulo, descripcion, categoria;
 
-   cout<<"\t MENU" <<endl;
+   cout<<"\t MENU"<<endl;
    cout<<"1.- Agregar Articulo"<<endl;
    cout<<"2.- Modificar Articulo"<<endl;
    cout<<"3.- Eliminar Articulo"<<endl;
@@ -29,4 +29,57 @@ switch(opcion){
 
            cout<<"Ingrese nombre del articulo: "<<endl;
            cin.ignore();
-           getline(cin, 
+           getline(cin, articulo);
+
+           cout<<"Ingrese la descripcion del articulo: "<<endl;
+           cin.ignore();
+           getline(cin, descripcion);
+
+           cout<<"Ingrese la categoria del articulo:"<<endl;
+           cin.ignore();
+           getline(cin, categoria);
+
+           cout<<"Ingrese el precio unitario del articulo: "<<endl; 
+           cin>>precio_unitario;
+
+           iva = precio_unitario *. 16;
+           total = iva + precio_unitario;
+
+           cout<<"El iva es: "<<iva<<endl;
+           cout<<"El total es: "<<total<<endl;
+
+           return main();
+           break;
+
+   case 2: //Modificar articulo 
+           break;
+   
+   case 3: //Eliminar articulo
+           break;
+
+   case 4: //Lista de articulos
+           break;
+
+   case 5: //Limpiar pantalla
+           system("clear");
+           return main();
+           break;
+
+   case 6: //Salir
+           cout<<"Gracias :D"<<endl;
+           break;
+
+   default: cout<<"Ingrese una opcion correcta"<<endl;
+            return main();
+  } 
+
+return 0;
+
+}
+
+
+
+
+           
+
+
